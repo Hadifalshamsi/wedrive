@@ -20,18 +20,18 @@ extension CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: 24.5333, longitude: 54.3976)
 }
 
+
 struct ContentView: View {
-    
+
+    @ObservedObject var locationManager = LocationManager()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Map(interactionModes: [.pan, .zoom, .pitch]) {
+            // markers & annotations go here
         }
-        .padding()
     }
 }
+
 
 #Preview {
     ContentView()
