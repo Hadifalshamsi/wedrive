@@ -37,7 +37,13 @@ struct ContentView: View {
                    systemImage: "mappin.circle",
                    coordinate: .SZGrandMosque)
                 .tint(.green)
-        
+            
+            Annotation("Louvre Abu Dhabi", coordinate: .LouvreAD) {
+                Image(systemName: "building.columns.fill")
+                    .foregroundStyle(.white)
+                    .padding(8)
+                    .background(.blue, in: .circle)
+            }
 
         }
     }
