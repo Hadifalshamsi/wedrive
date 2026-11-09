@@ -26,8 +26,19 @@ struct ContentView: View {
     @ObservedObject var locationManager = LocationManager()
 
     var body: some View {
+        
         Map(interactionModes: [.pan, .zoom, .pitch]) {
-            // markers & annotations go here
+
+            Marker("The Dubai Mall", coordinate: .DubaiMall)
+
+            Marker("Burj Khalifa", coordinate: .BurjKhalifa)
+
+            Marker("Sheikh Zayed Grand Mosque",
+                   systemImage: "mappin.circle",
+                   coordinate: .SZGrandMosque)
+                .tint(.green)
+        
+
         }
     }
 }
